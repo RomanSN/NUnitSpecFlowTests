@@ -76,12 +76,20 @@ namespace NUnitSpecFlowTests.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Log in to the Gtpl bank app")]
-        [NUnit.Framework.CategoryAttribute("ignore")]
-        public virtual void LogInToTheGtplBankApp()
+        [NUnit.Framework.CategoryAttribute("test")]
+        [NUnit.Framework.TestCaseAttribute("x", "y", null)]
+        public virtual void LogInToTheGtplBankApp(string userId, string password, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
-                    "ignore"};
+            string[] @__tags = new string[] {
+                    "test"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("userId", userId);
+            argumentsOfScenario.Add("password", password);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Log in to the Gtpl bank app", null, tagsOfScenario, argumentsOfScenario);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
@@ -107,10 +115,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("When user navigate to Gtpl Bank login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
- testRunner.And("type \'mngr304098\' as userId into UserId field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("type {0} as userId into UserId field", userId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
- testRunner.And("type \'umEsUvU\' as password into Password field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("type {0} as password into Password field", password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 11
  testRunner.When("the Login button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

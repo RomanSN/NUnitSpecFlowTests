@@ -20,4 +20,10 @@
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.5.14" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="C:\Users\roman\.nuget\packages\specflow.nunit\3.5.14\build\\..\lib\netstandard2.0\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

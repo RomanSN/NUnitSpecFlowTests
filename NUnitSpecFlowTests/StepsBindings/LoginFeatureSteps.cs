@@ -13,13 +13,13 @@ namespace NUnitSpecFlowTests.StepsBindings
             driver.Url = "http://demo.guru99.com/V1/";
         }
         
-        [Given(@"type '(.*)' as userId into UserId field")]
+        [Given(@"type (.*) as userId into UserId field")]
         public void GivenTypeAsUserIdIntoUserIdField(string userId)
         {
             driver.WaitForElementClickable(locs.LoginPage.UserIdInput).SendKeys(userId);
         }
         
-        [Given(@"type '(.*)' as password into Password field")]
+        [Given(@"type (.*) as password into Password field")]
         public void GivenTypeAsPasswordIntoPasswordField(string password)
         {
             driver.WaitForElementClickable(locs.LoginPage.PasswordInput).SendKeys(password);

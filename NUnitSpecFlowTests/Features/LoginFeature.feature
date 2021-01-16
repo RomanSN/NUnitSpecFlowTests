@@ -4,9 +4,12 @@
 	I want to be able to log in to the app
 
 @ignore
-Scenario: Log in to the Gtpl bank app
+Scenario Outline: Log in to the Gtpl bank app
 	Given When user navigate to Gtpl Bank login page
-	And type 'mngr304098' as userId into UserId field
-	And type 'umEsUvU' as password into Password field
+	And type <userId> as userId into UserId field
+	And type <password> as password into Password field
 	When the Login button is clicked
 	Then main page of the application is opened
+Examples: 
+| userId | password |
+| x      | y        |
