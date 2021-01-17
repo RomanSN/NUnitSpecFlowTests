@@ -10,7 +10,7 @@ namespace NUnitSpecFlowTests.StepsBindings
         [Given(@"When user navigate to Gtpl Bank login page")]
         public void GivenWhenUserNavigateToGtplBankLoginPage()
         {
-            driver.Url = "http://demo.guru99.com/V1/";
+            webPo.LoginPage.NavigateTo();
         }
         
         [Given(@"type (.*) as userId into UserId field")]

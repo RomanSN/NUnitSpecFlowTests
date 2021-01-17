@@ -76,12 +76,12 @@ namespace NUnitSpecFlowTests.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Log in to the Gtpl bank app")]
-        [NUnit.Framework.CategoryAttribute("test")]
+        [NUnit.Framework.CategoryAttribute("ignore")]
         [NUnit.Framework.TestCaseAttribute("x", "y", null)]
         public virtual void LogInToTheGtplBankApp(string userId, string password, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "test"};
+                    "ignore"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));

@@ -8,7 +8,7 @@ namespace NUnitSpecFlowTests.PageObjects.LoginPage
     {
         public void NavigateTo()
         {
-            driver.Url = "http://demo.guru99.com/V1/";
+            driver.Url = ConfigurationManager.AppSettings["TargetServerUrl"];
             driver.WaitForElementClickable(locs.LoginPage.UserIdInput);
         }
         public void Login(string userId, string password)
